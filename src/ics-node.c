@@ -2,6 +2,8 @@
 #include "utlist.h"
 #include "ics-node.h"
 
+char* DEVICE_TYPE[] = {"RIU", "OIU"};
+
 void rius_init(riu_t **head) {
     *head = NULL;
 }

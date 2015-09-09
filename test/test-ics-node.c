@@ -33,7 +33,6 @@ int main() {
     rius_append(&head, &riu1);
     rius_append(&head, &riu2);
     rius_append(&head, &riu3);
-
     DL_FOREACH(head, node) {
         printf("Node: id=%s, is_online=%d, conn_str=%s, n_ports=%d, sqa_ip=%s\n", node->id, node->is_online, node->conn_str, node->n_ports, node->sqa_ip);
     }

@@ -1,12 +1,24 @@
 #ifndef __ICS_NODE_H__
 #define __ICS_NODE_H__
+
+#include <time.h>
+
+typedef enum {
+    RIU = 0,
+    OIU = 1   
+} device_type;
+
+extern char *DEVICE_TYPE[];
+
 typedef struct riu_s riu_t;
 typedef struct oiu_s oiu_t;
 
 #define ICS_NODE_COMMON_FIELDS \
     char id[10];\
-    int is_online
-
+    int is_online;\
+    time_t downtime;\
+    device_type type;
+    
 struct riu_s {
     ICS_NODE_COMMON_FIELDS;
     char conn_str[30];
@@ -18,7 +30,6 @@ struct riu_s {
 
 struct oiu_s {
     ICS_NODE_COMMON_FIELDS;
-    char user_id[10];
 
     oiu_t *next, *prev;
 };
