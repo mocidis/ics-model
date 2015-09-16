@@ -24,6 +24,8 @@ struct riu_s {
     char conn_str[30];
     int n_ports;
     char sqa_ip[30];
+    double frequence;
+    char location[50];
 
     riu_t *next, *prev;
 };
