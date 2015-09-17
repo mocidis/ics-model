@@ -22,7 +22,7 @@ typedef struct oiu_s oiu_t;
 struct riu_s {
     ICS_NODE_COMMON_FIELDS;
     char conn_str[30];
-    int n_ports;
+    char ports_status[100];
     char sqa_ip[30];
     double frequence;
     char location[50];
