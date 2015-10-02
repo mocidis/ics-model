@@ -17,7 +17,8 @@ typedef struct oiu_s oiu_t;
     char id[10];\
     int is_online;\
     time_t recv_time;\
-    device_type type;
+    device_type type;\
+    char des[10];
     
 struct riu_s {
     ICS_NODE_COMMON_FIELDS;
