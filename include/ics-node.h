@@ -18,15 +18,22 @@ typedef struct oiu_s oiu_t;
     int is_online;\
     time_t recv_time;\
     device_type type;\
-    char des[10];
+    char desc[250];\
+    char ip_addr[50];
     
 struct riu_s {
     ICS_NODE_COMMON_FIELDS;
-    char conn_str[30];
-    char ports_status[100];
-    char sqa_ip[30];
-    double frequence;
     char location[50];
+
+    int is_tx;
+    int is_sq;
+
+    double frequence;
+    int port;
+    double volume;
+
+    char multicast_ip [16];
+    int stream_port;
 
     riu_t *next, *prev;
 };
